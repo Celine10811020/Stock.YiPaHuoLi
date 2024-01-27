@@ -1,0 +1,63 @@
+.title
+{
+  text-align: center;
+}
+
+.wrapper
+{
+  margin: 5vw;
+  text-align: center;
+}
+
+.input
+{
+  margin: 1vw;
+}
+
+.button
+{
+  margin: 1vw;
+}
+
+.result
+{
+  margin-right: 37vw;
+  margin-top: 4vw;
+  text-align: right;
+}
+
+.result a
+{
+  line-height: 5vw;
+  font-size: 3vw;
+}
+
+#Copy
+{
+  visibility: hidden;
+}
+
+.red
+{
+  color: red;
+}
+
+.green
+{
+  color: #008200;
+}
+
+.blank
+{
+  height: 30px;
+}
+
+.information
+{
+  margin-bottom: auto;
+  border: 1px solid #333;
+  box-shadow: 8px 8px 5px #444;
+  padding-bottom: auto;
+  text-align: center;
+  background-image: linear-gradient(180deg, #fff, #ddd 40%, #ccc);
+}
