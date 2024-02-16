@@ -16,6 +16,11 @@ function calculate()
         outputBuy = parseFloat(outputBuy) - 0.5;
       }else
       {
+        if(Number.isInteger(outputBuy) == false)
+        {
+          outputBuy = parseFloat(outputBuy) - 0.5;
+        }
+
         outputBuy = parseFloat(outputBuy) - 1;
       }
 
@@ -48,6 +53,11 @@ function calculate()
         outputSell = parseFloat(outputSell) + 0.5;
       }else
       {
+        if(Number.isInteger(outputSell) == false)
+        {
+          outputSell = parseFloat(outputSell) + 0.5;
+        }
+        
         outputSell = parseFloat(outputSell) + 1;
       }
 
