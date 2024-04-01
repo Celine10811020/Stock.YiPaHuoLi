@@ -4,6 +4,14 @@ var outputBuy;
 var outputSell;
 var jingDe;
 var huoLi;
+var outputBuyOne;
+var outputSellOne;
+var jingDeOne;
+var huoLiOne;
+var outputBuyTwo;
+var outputSellTwo;
+var jingDeTwo;
+var huoLiTwo;
 
 var biLi = 0.001425;
 var heJiBuy;

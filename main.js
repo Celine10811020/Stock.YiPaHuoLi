@@ -35,9 +35,13 @@ function calculate()
       huoLi = parseFloat(jingDe) / parseFloat(outputBuy);
     }
 
-    document.getElementById("JiaGeOne").innerHTML = "1.0% 回補價  " + outputBuy.toFixed(1);
-    document.getElementById("JingDeOne").innerHTML = "淨得  " + jingDe.toFixed(3);
-    document.getElementById("HuoLiOne").innerHTML = "獲利  " + huoLi.toFixed(3);
+    outputBuyOne = outputBuy;
+    jingDeOne = jingDe;
+    huoLiOne = huoLi;
+
+    document.getElementById("JiaGeOne").innerHTML = "1.0% 回補價  " + outputBuyOne.toFixed(1);
+    document.getElementById("JingDeOne").innerHTML = "淨得  " + jingDeOne.toFixed(3);
+    document.getElementById("HuoLiOne").innerHTML = "獲利  " + huoLiOne.toFixed(3);
     document.getElementById("JiaGeOne").style.color = "red";
 
 
@@ -68,9 +72,13 @@ function calculate()
       huoLi = parseFloat(jingDe) / parseFloat(outputBuy);
     }
 
-    document.getElementById("JiaGeTwo").innerHTML = "0.1% 回補價  " + outputBuy.toFixed(1);
-    document.getElementById("JingDeTwo").innerHTML = "淨得  " + jingDe.toFixed(3);
-    document.getElementById("HuoLiTwo").innerHTML = "獲利  " + huoLi.toFixed(3);
+    outputBuyTwo = outputBuy;
+    jingDeTwo = jingDe;
+    huoLiTwo = huoLi;
+
+    document.getElementById("JiaGeTwo").innerHTML = "0.1% 回補價  " + outputBuyTwo.toFixed(1);
+    document.getElementById("JingDeTwo").innerHTML = "淨得  " + jingDeTwo.toFixed(3);
+    document.getElementById("HuoLiTwo").innerHTML = "獲利  " + huoLiTwo.toFixed(3);
 
     document.getElementById("JiaGeTwo").style.color = "red";
 
@@ -105,9 +113,13 @@ function calculate()
       huoLi = parseFloat(jingDe) / parseFloat(inputBuy);
     }
 
-    document.getElementById("JiaGeOne").innerHTML = "1.0% 賣出價  " + outputSell.toFixed(1);
-    document.getElementById("JingDeOne").innerHTML = "淨得  " + jingDe.toFixed(3);
-    document.getElementById("HuoLiOne").innerHTML = "獲利  " + huoLi.toFixed(3);
+    outputSellOne = outputSell;
+    jingDeOne = jingDe;
+    huoLiOne = huoLi;
+
+    document.getElementById("JiaGeOne").innerHTML = "1.0% 賣出價  " + outputSellOne.toFixed(1);
+    document.getElementById("JingDeOne").innerHTML = "淨得  " + jingDeOne.toFixed(3);
+    document.getElementById("HuoLiOne").innerHTML = "獲利  " + huoLiOne.toFixed(3);
     document.getElementById("JiaGeOne").style.color = "#008200";
 
 
@@ -138,9 +150,13 @@ function calculate()
       huoLi = parseFloat(jingDe) / parseFloat(inputBuy);
     }
 
-    document.getElementById("JiaGeTwo").innerHTML = "0.1% 賣出價  " + outputSell.toFixed(1);
-    document.getElementById("JingDeTwo").innerHTML = "淨得  " + jingDe.toFixed(3);
-    document.getElementById("HuoLiTwo").innerHTML = "獲利  " + huoLi.toFixed(3);
+    outputSellTwo = outputSell;
+    jingDeTwo = jingDe;
+    huoLiTwo = huoLi;
+
+    document.getElementById("JiaGeTwo").innerHTML = "0.1% 賣出價  " + outputSellTwo.toFixed(1);
+    document.getElementById("JingDeTwo").innerHTML = "淨得  " + jingDeTwo.toFixed(3);
+    document.getElementById("HuoLiTwo").innerHTML = "獲利  " + huoLiTwo.toFixed(3);
 
     document.getElementById("JiaGeTwo").style.color = "#008200";
   }
