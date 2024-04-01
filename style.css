@@ -19,10 +19,19 @@
   margin: 1vw;
 }
 
+.resultDiv
+{
+  margin: 1px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
 .result
 {
-  margin-right: 37vw;
   margin-top: 4vw;
+  margin-right: 4vw;
+  margin-left: 4vw;
   text-align: right;
 }
 

@@ -35,11 +35,44 @@ function calculate()
       huoLi = parseFloat(jingDe) / parseFloat(outputBuy);
     }
 
-    document.getElementById("JiaGe").innerHTML = "回補價  " + outputBuy.toFixed(1);
-    document.getElementById("JingDe").innerHTML = "淨得  " + jingDe.toFixed(3);
-    document.getElementById("HuoLi").innerHTML = "獲利  " + huoLi.toFixed(3);
+    document.getElementById("JiaGeOne").innerHTML = "1.0% 回補價  " + outputBuy.toFixed(1);
+    document.getElementById("JingDeOne").innerHTML = "淨得  " + jingDe.toFixed(3);
+    document.getElementById("HuoLiOne").innerHTML = "獲利  " + huoLi.toFixed(3);
+    document.getElementById("JiaGeOne").style.color = "red";
 
-    document.getElementById("JiaGe").style.color = "red";
+
+    huoLi = 0;
+    outputBuy = inputSell;
+
+    while(parseFloat(huoLi) < 0.001)
+    {
+      if(parseFloat(outputBuy) < 100)
+      {
+        outputBuy = parseFloat(outputBuy) - 0.1;
+      }else if(parseFloat(outputBuy) < 500)
+      {
+        outputBuy = parseFloat(outputBuy) - 0.5;
+      }else
+      {
+        outputBuy = parseFloat(outputBuy) - 1;
+      }
+
+      heJiBuy = parseFloat(biLi) * parseFloat(outputBuy) * parseFloat(inputNumber);
+      heJiSell = parseFloat(biLi) * parseFloat(inputSell) * parseFloat(inputNumber);
+
+      chaJia = parseFloat(inputSell) - parseFloat(outputBuy);
+      shouXu = parseFloat(heJiBuy) + parseFloat(heJiSell);
+      shuiJingHe = parseFloat(shuiJing) * parseFloat(inputSell);
+
+      jingDe = parseFloat(chaJia) - parseFloat(shouXu) - parseFloat(shuiJingHe);
+      huoLi = parseFloat(jingDe) / parseFloat(outputBuy);
+    }
+
+    document.getElementById("JiaGeTwo").innerHTML = "0.1% 回補價  " + outputBuy.toFixed(1);
+    document.getElementById("JingDeTwo").innerHTML = "淨得  " + jingDe.toFixed(3);
+    document.getElementById("HuoLiTwo").innerHTML = "獲利  " + huoLi.toFixed(3);
+
+    document.getElementById("JiaGeTwo").style.color = "red";
 
   }else if(inputSell == "")
   {
@@ -57,7 +90,7 @@ function calculate()
         {
           outputSell = parseFloat(outputSell) + 0.5;
         }
-        
+
         outputSell = parseFloat(outputSell) + 1;
       }
 
@@ -72,15 +105,50 @@ function calculate()
       huoLi = parseFloat(jingDe) / parseFloat(inputBuy);
     }
 
-    document.getElementById("JiaGe").innerHTML = "賣出價  " + outputSell.toFixed(1);
-    document.getElementById("JingDe").innerHTML = "淨得  " + jingDe.toFixed(3);
-    document.getElementById("HuoLi").innerHTML = "獲利  " + huoLi.toFixed(3);
+    document.getElementById("JiaGeOne").innerHTML = "1.0% 賣出價  " + outputSell.toFixed(1);
+    document.getElementById("JingDeOne").innerHTML = "淨得  " + jingDe.toFixed(3);
+    document.getElementById("HuoLiOne").innerHTML = "獲利  " + huoLi.toFixed(3);
+    document.getElementById("JiaGeOne").style.color = "#008200";
 
-    document.getElementById("JiaGe").style.color = "#008200";
+
+    huoLi = 0;
+    outputSell = inputBuy;
+
+    while(parseFloat(huoLi) < 0.001)
+    {
+      if(parseFloat(outputSell) < 100)
+      {
+        outputSell = parseFloat(outputSell) + 0.1;
+      }else if(parseFloat(outputSell) < 500)
+      {
+        outputSell = parseFloat(outputSell) + 0.5;
+      }else
+      {
+        outputSell = parseFloat(outputSell) + 1;
+      }
+
+      heJiBuy = parseFloat(biLi) * parseFloat(inputBuy) * parseFloat(inputNumber);
+      heJiSell = parseFloat(biLi) * parseFloat(outputSell) * parseFloat(inputNumber);
+
+      chaJia = parseFloat(outputSell) - parseFloat(inputBuy);
+      shouXu = parseFloat(heJiBuy) + parseFloat(heJiSell);
+      shuiJingHe = parseFloat(shuiJing) * parseFloat(outputSell);
+
+      jingDe = parseFloat(chaJia) - parseFloat(shouXu) - parseFloat(shuiJingHe);
+      huoLi = parseFloat(jingDe) / parseFloat(inputBuy);
+    }
+
+    document.getElementById("JiaGeTwo").innerHTML = "0.1% 賣出價  " + outputSell.toFixed(1);
+    document.getElementById("JingDeTwo").innerHTML = "淨得  " + jingDe.toFixed(3);
+    document.getElementById("HuoLiTwo").innerHTML = "獲利  " + huoLi.toFixed(3);
+
+    document.getElementById("JiaGeTwo").style.color = "#008200";
   }
 
-  document.getElementById("JingDe").style.color = "black";
-  document.getElementById("HuoLi").style.color = "black";
+  document.getElementById("JingDeOne").style.color = "black";
+  document.getElementById("HuoLiOne").style.color = "black";
+  document.getElementById("JingDeTwo").style.color = "black";
+  document.getElementById("HuoLiTwo").style.color = "black";
 
   console.log(inputBuy);
   console.log(inputSell);
